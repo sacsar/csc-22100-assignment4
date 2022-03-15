@@ -35,6 +35,7 @@ public class GameOfLifeApplication extends Application {
         controller.init(viewModel);
 
         Scene scene = new Scene(root);
+        primaryStage.setTitle("Game of Life");
         primaryStage.setScene(scene);
         primaryStage.show();
     }

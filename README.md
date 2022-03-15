@@ -1,5 +1,7 @@
 # CSc 22100 Assignment 4: Conway's Game of Life
 
+> :warning: **Warning:**  This assignment is still under development. Begin working on it at your own risk.
+
 In this assignment, you'll implement [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) as
 a JavaFX application.
 
@@ -26,9 +28,14 @@ Remember that the grid is _infinite_, meaning that, even if we don't display a c
 was designed with MVC in mind and it would be the "controller" piece of MVC)
 - `csc22100.assignment4.ui.GameOfLifeViewModel` is, unsurprisingly the view model.
 
+[!screenshot](./screenshot.png)
+
 ## Your Mission
 
 1) Implement `evolve` in the `Life` class. (Recommendation: Do a 5x5 or 10x10 example on paper and then write some unit tests.)
 2) Complete `init` in `GameOfLifeController` to bind the various UI elements to functions in the `GameOfLifeViewModel`
 3) Implement `receiveNotification` in the `GameOfLifeViewModel`. After an evolution, the view model will receive a notification from
   the `LifeService` containing the new state. You then need to update the view model (and thus the view).
+4) Wire the start, stop, step and reset buttons in the view/`GameOfLifeController` to the `GameOfLifeViewModel`. I created a `start`
+  method, you'll need to add the others.
+5) Wire up the slider so that it controls how long to sleep between evolutions.

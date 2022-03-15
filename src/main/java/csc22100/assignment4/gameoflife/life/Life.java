@@ -9,19 +9,19 @@ public class Life  {
     private static final Random RANDOM = new Random();
 
     private final Map<Position, Boolean> cells;
-    private final int maxX;
-    private final int maxY;
+    private final int numRows;
+    private final int numCols;
 
-    public Life(int maxX, int maxY) {
-        this(maxX, maxY, 0.5);
+    public Life(int numRows, int numCols) {
+        this(numRows, numCols, 0.5);
     }
 
-    public Life(int maxX, int maxY, double probAlive) {
-        this.maxX = maxX;
-        this.maxY = maxY;
+    public Life(int numRows, int numCols, double probAlive) {
+        this.numRows = numRows;
+        this.numCols = numCols;
         cells = new TreeMap<>(Comparator.comparing(Position::getX).thenComparing(Position::getY));
-        for (int i = 0; i < maxX; i++) {
-            for (int j = 0; j < maxY; j++) {
+        for (int i = 0; i < numRows; i++) {
+            for (int j = 0; j < numCols; j++) {
                 Position position = new Position(i, j);
                 boolean isAlive = RANDOM.nextDouble() < probAlive;
                 cells.put(position, isAlive);
@@ -30,9 +30,9 @@ public class Life  {
 
     }
 
-    public Life(int maxX, int maxY, Map<Position, Boolean> state) {
-        this.maxX = maxX;
-        this.maxY = maxY;
+    public Life(int numRows, int numCols, Map<Position, Boolean> state) {
+        this.numRows = numRows;
+        this.numCols = numCols;
         this.cells = state;
     }
 
@@ -40,12 +40,12 @@ public class Life  {
         throw new NotImplementedException();
     }
 
-    public int getMaxX() {
-        return maxX;
+    public int getNumRows() {
+        return numRows;
     }
 
-    public int getMaxY() {
-        return maxY;
+    public int getNumCols() {
+        return numCols;
     }
 
     public Map<Position, Boolean> getCellStates() {

@@ -41,12 +41,12 @@ public class LifeService {
         observers.remove(observer);
     }
 
-    public int getMaxX() {
-        return life.getMaxX();
+    public int getNumRows() {
+        return life.getNumRows();
     }
 
-    public int getMaxY() {
-        return life.getMaxY();
+    public int getNumCols() {
+        return life.getNumCols();
     }
 
     public void start(int sleepInterval) {
