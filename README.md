@@ -1,6 +1,8 @@
 # CSc 22100 Assignment 4: Conway's Game of Life
 
 > :warning: **Warning:**  This assignment is still under development. Begin working on it at your own risk.
+> :warning: **UPDATE 2022-03-16** I switched from using `x` and `y` in the `Position` class to `row` and `column`.
+> The positions are supposed to be numbered as if they were elements of a matrix.
 
 In this assignment, you'll implement [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) as
 a JavaFX application.
@@ -39,3 +41,8 @@ was designed with MVC in mind and it would be the "controller" piece of MVC)
 4) Wire the start, stop, step and reset buttons in the view/`GameOfLifeController` to the `GameOfLifeViewModel`. I created a `start`
   method, you'll need to add the others.
 5) Wire up the slider so that it controls how long to sleep between evolutions.
+
+### Additional Specifications/Requirements
+- The buttons should be enabled/disabled as appropriate:
+  - When the simulation is running, only the stop button should be active
+  - When the simulation is stopped, the start, reset and step buttons should be active, but stop should be disabled
