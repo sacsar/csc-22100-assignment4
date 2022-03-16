@@ -1,6 +1,7 @@
 # CSc 22100 Assignment 4: Conway's Game of Life
 
 > :warning: **Warning:**  This assignment is still under development. Begin working on it at your own risk.
+> 
 > :warning: **UPDATE 2022-03-16** I switched from using `x` and `y` in the `Position` class to `row` and `column`.
 > The positions are supposed to be numbered as if they were elements of a matrix.
 
