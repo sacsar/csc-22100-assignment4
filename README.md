@@ -28,7 +28,7 @@ Remember that the grid is _infinite_, meaning that, even if we don't display a c
 was designed with MVC in mind and it would be the "controller" piece of MVC)
 - `csc22100.assignment4.ui.GameOfLifeViewModel` is, unsurprisingly the view model.
 
-[!screenshot](./screenshot.png)
+![screenshot](./screenshot.png)
 
 ## Your Mission
 
