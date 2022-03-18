@@ -6,3 +6,6 @@ build
 
 .idea
 bin/
+.classpath
+.project
+.settings

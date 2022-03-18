@@ -7,7 +7,7 @@ import java.util.StringJoiner;
 import java.util.stream.Collectors;
 
 /**
- * Clas representing a cell position
+ * Class representing a cell position
  */
 public class Position {
     private final int r;
@@ -48,7 +48,7 @@ public class Position {
         throw new IllegalStateException(String.format("Unknown direction %s", direction));
     }
 
-    public Set<Position> getAllNeigbors() {
+    public Set<Position> getAllNeighbors() {
         return Arrays.stream(Direction.values()).map(this::getNeighbor).collect(Collectors.toSet());
     }
 

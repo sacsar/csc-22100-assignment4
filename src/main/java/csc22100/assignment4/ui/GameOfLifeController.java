@@ -13,38 +13,53 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.StrokeType;
 
 
+/**
+ * The "View" of our application.
+ */
 public class GameOfLifeController {
     @FXML
-    private Button startButton;
+    Button startButton;
 
     @FXML
-    private Button stopButton;
+    Button stopButton;
 
     @FXML
-    private Button resetButton;
+    Button resetButton;
 
     @FXML
-    private Button stepButton;
+    Button stepButton;
 
     @FXML
-    private MenuItem quitItem;
+    MenuItem quitItem;
 
     @FXML
-    private GridPane gridPane;
+    GridPane gridPane;
 
     @FXML
-    private Slider slider;
+    Slider slider;
 
     private GameOfLifeViewModel viewModel;
 
+    /**
+     * Initialize the controller based on the view model
+     *
+     * @param viewModel the {@link GameOfLifeViewModel} with which to bind
+     */
     public void init(GameOfLifeViewModel viewModel) {
         this.viewModel = viewModel;
-        // TODO: attach listeners/bindings that interact with the view model
-        slider.valueProperty().addListener((val) -> {
-            // TODO: What happens when the value of the slider changes?
-        });
 
         quitItem.setOnAction((ev) -> Platform.exit());
+
+        // TODO: setOnAction for the buttons.
+        startButton.setOnAction((ev) -> viewModel.start());
+
+        // TODO: Use viewModel.isRunning() to bind to the buttons' disableProperty
+        // to enable/disable them as appropriate.
+        // Hint: Remember the Bindings class contains helpers to transform one Binding to another
+
+        // TODO: Also attach a *listener* to tell the viewmodel to
+        // update the sleep interval in the LifeService when the value changes
+        slider.valueProperty().bindBidirectional(viewModel.sleepIntervalSeconds());
 
         if (viewModel.getCellStates() == null) {
             throw new IllegalArgumentException();
