@@ -2,6 +2,8 @@
 
 > :warning: **UPDATE 2022-03-16** I switched from using `x` and `y` in the `Position` class to `row` and `column`.
 > The positions are supposed to be numbered as if they were elements of a matrix.
+> :warning: **UPDATE 2022-03-27** It was pointed out that there is nothing do for Step (3). Similarly, you might consider
+> Steps (2) and (4) one task.
 
 In this assignment, you'll implement [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) as
 a JavaFX application.
@@ -35,8 +37,8 @@ was designed with MVC in mind and it would be the "controller" piece of MVC)
 
 1) Implement `evolve` in the `Life` class. (Recommendation: Do a 5x5 or 10x10 example on paper and then write some unit tests.)
 2) Complete `init` in `GameOfLifeController` to bind the various UI elements to functions in the `GameOfLifeViewModel`
-3) Implement `receiveNotification` in the `GameOfLifeViewModel`. After an evolution, the view model will receive a notification from
-  the `LifeService` containing the new state. You then need to update the view model (and thus the view).
+3) I did this step for you. ~~Implement `receiveNotification` in the `GameOfLifeViewModel`. After an evolution, the view model will receive a notification from
+  the `LifeService` containing the new state. You then need to update the view model (and thus the view).~~
 4) Wire the start, stop, step and reset buttons in the view/`GameOfLifeController` to the `GameOfLifeViewModel`. I created a `start`
   method, you'll need to add the others.
 5) Wire up the slider so that it controls how long to sleep between evolutions.
