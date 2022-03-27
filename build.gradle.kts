@@ -66,6 +66,7 @@ tasks {
     }
     val copyZip by registering(Copy::class) {
         from(packageAssignment.get().outputs)
+        destinationDir = project.projectDir
     }
 
     val source2pdf by registering(JavaExec::class) {
