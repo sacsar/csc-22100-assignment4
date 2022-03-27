@@ -2,6 +2,7 @@
 
 > :warning: **UPDATE 2022-03-16** I switched from using `x` and `y` in the `Position` class to `row` and `column`.
 > The positions are supposed to be numbered as if they were elements of a matrix.
+
 > :warning: **UPDATE 2022-03-27** It was pointed out that there is nothing do for Step (3). Similarly, you might consider
 > Steps (2) and (4) one task.
 
